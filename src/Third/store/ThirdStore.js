@@ -8,29 +8,29 @@ class ThirdStore {
 
   @action
   setPersonObj() {
-    this.person = new Person("luke", 31);
+    this.person = new Person({name: "luke", age: 31});
   }
 
   @action
   setPersonList() {
     this.personList = [
-      new Person("kyun", 29),
-      new Person("chang", 28),
-      new Person("hong", 28),
-      new Person("sun", 26)
+      new Person({name: "kyun", age: 29}),
+      new Person({name: "chang", age: 28}),
+      new Person({name: "hong", age: 28}),
+      new Person({name: "sun", age: 26})
     ];
   }
 
   @action
   setPersonMap() {
-    personMap.set("dev1", [
-      new Person("kyun", 29),
-      new Person("chang", 28),
-      new Person("hong", 28),
-      new Person("luke", 31)
+    this.personMap.set("dev1", [
+      new Person({name: "kyun", age: 29}),
+      new Person({name: "chang", age: 28}),
+      new Person({name: "hong", age: 28}),
+      new Person({name: "luke", age: 31})
     ]);
 
-    personMap.set("dev2", [new Person("sun", 26)]);
+    this.personMap.set("dev2", [new Person({name: "sun", age: 26})]);
   }
 }
 
